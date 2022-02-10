@@ -1,8 +1,8 @@
 --------------------------------------------------------------------------------------------------------
 --                                               BTEX(Bottom TEXture)                                 --
---                                            V8.0 - 2016 by Twistedfury                              --
---                                       V9.0 - 2020 fan update by Zetaprime82                        --
---							               originally from Tiggy, Ysondre-EU                          --
+--                                            V9.0 - 2020 by Zetaprime82                              --
+--                                            Former Author: Twistedfury                              --
+--                                         originally from Tiggy, Ysondre-EU                          --
 --------------------------------------------------------------------------------------------------------
 DEFAULT_CHAT_FRAME:AddMessage("|c00bfffffBtex|r " ..BTEX_VERSION..SLASHLOAD, 0.0, .80, 1);
 --------------------------------------------------------------------------------------------------------
