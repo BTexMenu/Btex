@@ -215,7 +215,7 @@ BtexMenuFrame:SetScript("OnEvent",OnEvent);
 
 -- text
 BtexMenuFrame.text1 = BtexMenuFrame:CreateFontString(nil,"ARTWORK");
-BtexMenuFrame.text1:SetFont("Interface\\AddOns\\Btex\\Menu.ttf", 18, "");
+BtexMenuFrame.text1:SetFont("Interface\\AddOns\\Btex\\Menu.ttf", 30, "");
 BtexMenuFrame.text1:SetPoint("TOP",0,-10);
 BtexMenuFrame.text1:SetText("BTex Menu");
 BtexMenuFrame.vers = BtexMenuFrame:CreateFontString(nil,"ARTWORK");
