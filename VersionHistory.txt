@@ -1,6 +1,9 @@
 *********************
 * Version History : *
 *********************
+v2.5.4 03 May 2022 
+ - BCC TOC bump
+
 v9.4 23 February 2022 
  - TOC bump for patch 9.2
 
