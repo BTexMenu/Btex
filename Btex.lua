@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------------------------------
 --                                               BTEX(Bottom TEXture)                                 --
---                                      V9.x (WoW 9.2.7) - 2022 by Zetaprime82                        --
+--                                      V10.x.x (WoW 10.x.x) - 2022 by Zetaprime82                    --
 --                                            Former Author: Twistedfury                              --
 --                                         originally from Tiggy, Ysondre-EU                          --
 --------------------------------------------------------------------------------------------------------
@@ -32,7 +32,7 @@ local texture4 = BtexMainFrame4:CreateTexture(nil,"BACKGROUND");
 
 --font button
 local BtexFont = CreateFont("Btest");
-BtexFont:SetFont("Interface\\AddOns\\Btex\\Btex.ttf", 9,"BOLD");
+BtexFont:SetFont("Interface\\AddOns\\Btex\\Btex.ttf", 9,"MONOCHROME");
 
 -- Viewport Woldframe
 function BtexViewport()
