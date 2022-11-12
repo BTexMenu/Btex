@@ -919,6 +919,14 @@ function BtexDropDownMenu_Initialise()
 	info.checked = nil;
 	info.icon = nil;
 	UIDropDownMenu_AddButton(info, level);
+		--menu item16
+	info.text = "ElvUIb";
+	info.value = 16;
+	info.func = BtexDropDownMenuItem_OnClick;
+	info.owner = BtexDropDownMenu;
+	info.checked = nil;
+	info.icon = nil;
+	UIDropDownMenu_AddButton(info, level);
 end
 -- Initialise
 UIDropDownMenu_Initialize(BtexDropDownMenu, BtexDropDownMenu_Initialise);
@@ -972,8 +980,11 @@ function BtexDropDownMenuItem_OnClick(self)
   elseif (self.value == 14) then
   TEX_CHOICE = "D"
   TexturePreviewFrame:Hide();
-    elseif (self.value == 15) then
-  TEX_CHOICE = "ElvUI"
+  elseif (self.value == 15) then
+  TEX_CHOICE = "ElvUIa"
+  TexturePreviewFrame:Hide();
+  elseif (self.value == 16) then
+  TEX_CHOICE = "ElvUIb"
   TexturePreviewFrame:Hide();
   end
 end
