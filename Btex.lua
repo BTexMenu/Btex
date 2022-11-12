@@ -199,7 +199,7 @@ end
 local BtexMenuFrame = CreateFrame("Frame","btexframeconfig",UIParent, BackdropTemplateMixin and "BackdropTemplate");
 BtexMenuFrame:SetWidth(400);
 BtexMenuFrame:SetHeight(480);
-BtexMenuFrame:SetBackdrop({ bgFile = "Interface\\Tooltips\\UI-Tooltip-Background", edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", tile = true, tileSize = 8, edgeSize = 12, insets = { left = 2, right = 2, top = 2, bottom = 2 } });
+BtexMenuFrame:SetBackdrop({ bgFile = "interface\\dialogframe\\ui-dialogbox-background.blp", edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", tile = true, tileSize = 8, edgeSize = 12, insets = { left = 2, right = 2, top = 2, bottom = 2 } });
 BtexMenuFrame:SetBackdropColor(0.1,0.1,0.2,1);
 BtexMenuFrame:SetBackdropBorderColor(0.1,0.1,0.1,1);
 BtexMenuFrame:SetMovable(1);
@@ -420,7 +420,7 @@ end
 BtexViewportFrame = CreateFrame("Frame","BtexViewportFrame",UIParent, BackdropTemplateMixin and "BackdropTemplate");
 BtexViewportFrame:SetWidth(330);
 BtexViewportFrame:SetHeight(200);
-BtexViewportFrame:SetBackdrop({ bgFile = "Interface\\Tooltips\\UI-Tooltip-Background", edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", tile = true, tileSize = 8, edgeSize = 12, insets = { left = 2, right = 2, top = 2, bottom = 2 } });
+BtexViewportFrame:SetBackdrop({ bgFile = "interface\\dialogframe\\ui-dialogbox-background.blp", edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", tile = true, tileSize = 8, edgeSize = 12, insets = { left = 2, right = 2, top = 2, bottom = 2 } });
 BtexViewportFrame:SetBackdropColor(0.1,0.1,0.2,1);
 BtexViewportFrame:SetBackdropBorderColor(0.1,0.1,0.1,1);
 BtexViewportFrame:SetMovable(1);
@@ -564,7 +564,7 @@ BtexViewportFrame.reset:SetText(DEFAULT);
 local BtexCustomFrame = CreateFrame("Frame","btexframeconfig",UIParent, BackdropTemplateMixin and "BackdropTemplate");
 BtexCustomFrame:SetWidth(450);
 BtexCustomFrame:SetHeight(340);
-BtexCustomFrame:SetBackdrop({ bgFile = "Interface\\Tooltips\\UI-Tooltip-Background", edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", tile = true, tileSize = 8, edgeSize = 12, insets = { left = 2, right = 2, top = 2, bottom = 2 } });
+BtexCustomFrame:SetBackdrop({ bgFile = "interface\\dialogframe\\ui-dialogbox-background.blp", edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", tile = true, tileSize = 8, edgeSize = 12, insets = { left = 2, right = 2, top = 2, bottom = 2 } });
 BtexCustomFrame:SetBackdropColor(0.1,0.1,0.2,1);
 BtexCustomFrame:SetBackdropBorderColor(0.1,0.1,0.1,1);
 BtexCustomFrame:SetMovable(1);
@@ -912,7 +912,7 @@ function BtexDropDownMenu_Initialise()
 	info.icon = nil;
 	UIDropDownMenu_AddButton(info, level);
 		--menu item15
-	info.text = "ElvUI";
+	info.text = "ElvUIa";
 	info.value = 15;
 	info.func = BtexDropDownMenuItem_OnClick;
 	info.owner = BtexDropDownMenu;
