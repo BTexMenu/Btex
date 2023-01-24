@@ -2,7 +2,7 @@
 --                                               BTEX(Bottom TEXture)                                 --
 --                                      V10.2 (WoW 10.0.5) - 2023 by Zetaprime82                      --
 --                                            Former Author: Twistedfury                              --
---                                         originally from Tiggy, Ysondre-EU                          --
+--                                       Originally Author Tiggy, Ysondre-EU                          --
 --------------------------------------------------------------------------------------------------------
 --                                              VARIABLES & MISC                                      --
 --------------------------------------------------------------------------------------------------------
