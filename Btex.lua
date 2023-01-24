@@ -2,7 +2,7 @@
 --                                               BTEX(Bottom TEXture)                                 --
 --                                      V10.2 (WoW 10.0.5) - 2023 by Zetaprime82                      --
 --                                            Former Author: Twistedfury                              --
---                                         originally from Tiggy, Ysondre-EU                          --
+--                                       Originally Author Tiggy, Ysondre-EU                          --
 --------------------------------------------------------------------------------------------------------
 DEFAULT_CHAT_FRAME:AddMessage("|c00bfffffBtex|r " ..BTEX_VERSION..SLASHLOAD, 0.0, .80, 1);
 --------------------------------------------------------------------------------------------------------
@@ -32,7 +32,7 @@ local texture4 = BtexMainFrame4:CreateTexture(nil,"BACKGROUND");
 
 --font button
 local BtexFont = CreateFont("Btest");
-BtexFont:SetFont("Interface\\AddOns\\Btex\\Btex.ttf", 9,"MONOCHROME");
+BtexFont:SetFont("Interface\\AddOns\\Btex\\Btex.ttf", 9,"");
 
 -- Viewport Woldframe
 function BtexViewport()
