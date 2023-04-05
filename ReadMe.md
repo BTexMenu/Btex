@@ -65,8 +65,8 @@ Create an account on [wowinterface](https://www.wowinterface.com/), then upload 
 Translation :
 -------------
 Language aviable for all frame config are :
-- default : english/US localisation,
-- french localisation,
+- Default : english/US localisation,
+- French localisation,
 - German localisation, credits to Kuhglöckchen a.k.a. Blocki
 - Russian localisation, credits to troyen
 - zhTW and zhCN localisation, credits to wowui.cn
