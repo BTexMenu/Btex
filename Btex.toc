@@ -1,8 +1,8 @@
 ## Interface: 100007
-## Title: BTEX 10.3 by |cFFFF8080 Zetaprime82, originally from Tiggy|r
-## Title-frFR: BTEX 10.3 par |cFFFF8080 Zetaprime82, à l'origine à partir de Tiggy|r
-## Title: BTEX |cFFFF8080 v.10.3 |r
-## Version: 10.3 (WoW 10.0.7)
+## Title: BTEX 10.4 by |cFFFF8080 Zetaprime82, originally from Tiggy|r
+## Title-frFR: BTEX 10.4 par |cFFFF8080 Zetaprime82, à l'origine à partir de Tiggy|r
+## Title: BTEX |cFFFF8080 v.10.4 |r
+## Version: 10.4 (WoW 10.1)
 ## Author: Zetaprime82
 ## X-Author: Tiggy, Twistedfury
 ## Notes: A lightweight addon that provide a customisable background texture at the bottom of the screen
