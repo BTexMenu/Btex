@@ -80,5 +80,5 @@ Do the skin support transparency ? yes. Via images files and via WOW API.
 Can i use BLP file? Yes. use custom load skin, and do like with any other tga file.
 
 A development of Tiggy's excellent addon
-Original file/addon can be found here : [Btex Orginal](http://www.wowinterface.com/downloads/info7906-BTex.html)
+Original file/addon can be found here : [Tiggy's Btex](http://www.wowinterface.com/downloads/info7906-BTex.html)
 
