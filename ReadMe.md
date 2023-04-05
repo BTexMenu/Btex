@@ -46,8 +46,8 @@ You can download and use this skins too (copy them to /Interface/Addons/btex/ski
 Making your own skins :
 -----------------------
 Download 1 of these PSD files to get started.
-- https://github.com/BTexMenu/BTex-UI-Template/releases/download/UI/btex_example.zip
-- https://github.com/BTexMenu/BTex-UI-Template/releases/download/UI/BornabeUI.Template.zip Thanks to Bornabe for sharing this.
+- [Btex Example](https://github.com/BTexMenu/BTex-UI-Template/releases/download/UI/btex_example.zip)
+- [BornabeUI](https://github.com/BTexMenu/BTex-UI-Template/releases/download/UI/BornabeUI.Template.zip) Thanks to Bornabe for sharing this.
 
 When done, make 4 tga like this :
 - image must be in RGB,
