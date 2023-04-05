@@ -35,13 +35,14 @@ Skins package known to work (Thanks to all artists sharing artwork !):
 ----------------------------------------------------------------------
 You can download and use this skins too (copy them to /Interface/Addons/btex/skins/ and just use "Custom skins") then type the name of the file u want to use without the "-1.tga" :
 
-- Skins by [Duxy](http://www.wowinterface.com/downloads/author-204503.html)
-- Skins by [Brandon87](http://www.wowinterface.com/downloads/author-272366.html)
-- Skins by [Jaimie](http://www.wowinterface.com/downloads/author-272286.html)
-- Skins by [Chemmy](http://www.wowinterface.com/downloads/author-44144.html)
-- Skins by [Bloodfest](http://www.wowinterface.com/downloads/author-277862.html)
-- Skins by [Bornabe](http://www.wowinterface.com/portal.php?id=591&amp;a=list)
-- Skins by [RosyBijou](http://www.wowinterface.com/downloads/info14777-BTEX--IceDragoncustomized.html#info)
+- Skins by "[Duxy](http://www.wowinterface.com/downloads/author-204503.html)"
+- Skins by "[Brandon87](http://www.wowinterface.com/downloads/author-272366.html)"
+- Skins by "[Jaimie](http://www.wowinterface.com/downloads/author-272286.html)"
+- Skins by "[Chemmy](http://www.wowinterface.com/downloads/author-44144.html)"
+- Skins by "[Bloodfest](http://www.wowinterface.com/downloads/author-277862.html)"
+- Skins by "[Bornabe](http://www.wowinterface.com/portal.php?id=591&amp;a=list)"
+- Skins by "[RosyBijou](http://www.wowinterface.com/downloads/info14777-BTEX--IceDragoncustomized.html#info)"
+- Skins by "[Molkolo](https://www.wowinterface.com/downloads/author-318632.html)"
 
 Making your own skins :
 -----------------------
