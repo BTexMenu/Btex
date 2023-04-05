@@ -59,7 +59,7 @@ When done, make 4 tga like this :
 
 How can i share my artwork ? :
 ------------------------------
-Create an account on wowinterface, then upload it here as a plugin : http://www.wowinterface.com/downloads/info20340-BTexFanupdate.html#other
+Create an account on [wowinterface](https://www.wowinterface.com/), then upload it there as a plugin under Plug-Ins & Patches
 
 Translation :
 -------------
