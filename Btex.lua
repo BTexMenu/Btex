@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------------------------------
 --                                               BTEX(Bottom TEXture)                                 --
---                         V11.1.5 (Retail, classic and classic era) - 2024 by Zetaprime82            --
+--                         V11.1.5 (Retail, Classic and Classic Era) - 2024 by Zetaprime82            --
 --                                            Former Author: Twistedfury                              --
 --                                       Originally Author Tiggy, Ysondre-EU                          --
 --------------------------------------------------------------------------------------------------------
