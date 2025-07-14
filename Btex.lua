@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------------------------------
 --                                               BTEX(Bottom TEXture)                                 --
---                         V11.1.7 (Retail, Classic and Classic Era) - 2025 by Zetaprime82            --
+--                         V11.2 (Retail, Classic and Classic Era) - 2025 by Zetaprime82              --
 --                                            Former Author: Twistedfury                              --
 --                                       Originally Author Tiggy, Ysondre-EU                          --
 --------------------------------------------------------------------------------------------------------
@@ -62,7 +62,7 @@ DEFAULT_CHAT_FRAME:AddMessage ( "ERROR : No texture set" );
 	BtexMainFrame1:ClearAllPoints();
 	BtexMainFrame1:SetFrameStrata(TEX_STRATA);
 	BtexMainFrame1:SetWidth(TEX_WIDTH);
-	BtexMainFrame1:SetAlpha(TEX_ALPHA); 	
+	BtexMainFrame1:SetAlpha(1); 	
 	BtexMainFrame1:SetHeight(TEX_HEIGHT);
 	BtexMainFrame1:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT",TEX_X, TEX_Y);
 	texture1:SetTexture("Interface\\AddOns\\BTEX\\Skins\\"..TEX_CHOICE.."-1");
@@ -75,7 +75,7 @@ DEFAULT_CHAT_FRAME:AddMessage ( "ERROR : No texture set" );
 	BtexMainFrame2:ClearAllPoints();
 	BtexMainFrame2:SetFrameStrata(TEX_STRATA);
 	BtexMainFrame2:SetWidth(TEX_WIDTH); 
-	BtexMainFrame2:SetAlpha(TEX_ALPHA);
+	BtexMainFrame2:SetAlpha(1);
 	BtexMainFrame2:SetHeight(TEX_HEIGHT);
 	BtexMainFrame2:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT",TEX_WIDTH+TEX_X, TEX_Y);
 	texture2:SetTexture("Interface\\AddOns\\BTEX\\Skins\\"..TEX_CHOICE.."-2");
@@ -88,7 +88,7 @@ DEFAULT_CHAT_FRAME:AddMessage ( "ERROR : No texture set" );
 	BtexMainFrame3:ClearAllPoints();
 	BtexMainFrame3:SetFrameStrata(TEX_STRATA);
 	BtexMainFrame3:SetWidth(TEX_WIDTH); 
-	BtexMainFrame3:SetAlpha(TEX_ALPHA);
+	BtexMainFrame3:SetAlpha(1);
 	BtexMainFrame3:SetHeight(TEX_HEIGHT);
 	BtexMainFrame3:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", TEX_WIDTH*2+TEX_X, TEX_Y);
 	texture3:SetTexture("Interface\\AddOns\\BTEX\\Skins\\"..TEX_CHOICE.."-3");
@@ -101,7 +101,7 @@ DEFAULT_CHAT_FRAME:AddMessage ( "ERROR : No texture set" );
 	BtexMainFrame4:ClearAllPoints();
 	BtexMainFrame4:SetFrameStrata(TEX_STRATA);
 	BtexMainFrame4:SetWidth(TEX_WIDTH); 
-	BtexMainFrame4:SetAlpha(TEX_ALPHA);
+	BtexMainFrame4:SetAlpha(1);
 	BtexMainFrame4:SetHeight(TEX_HEIGHT);
 	BtexMainFrame4:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", TEX_WIDTH*3+TEX_X, TEX_Y);
 	texture4:SetTexture("Interface\\AddOns\\BTEX\\Skins\\"..TEX_CHOICE.."-4");
