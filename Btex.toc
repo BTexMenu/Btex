@@ -1,8 +1,8 @@
-## Interface: 110205, 110207, 11508, 20505, 30405, 40402, 50503
-## Title: BTEX 11.2.7 by |cFFFF8080 Zetaprime82, originally from Tiggy|r
-## Title-frFR: BTEX 11.2.7 par |cFFFF8080 Zetaprime82, à l'origine à partir de Tiggy|r
+## Interface: 110207, 120000 11508, 20505, 30405, 40402, 50503
+## Title: BTEX 12.0.0 by |cFFFF8080 Zetaprime82, originally from Tiggy|r
+## Title-frFR: BTEX 12.0.0 par |cFFFF8080 Zetaprime82, à l'origine à partir de Tiggy|r
 ## Title: BTEX |cFFFF8080 Retail, Classic and Classic Era |r
-## Version: 11.2.7 (Retail, Classic and Classic Era)
+## Version: 12.0.0 (Retail, Classic and Classic Era)
 ## Author: Zetaprime82
 ## X-Author: Tiggy, Twistedfury
 ## Notes: A lightweight addon that provide a customisable background texture at the bottom of the screen
@@ -19,6 +19,7 @@
 
 Localisation.lua
 Btex.lua
+
 
 
 
