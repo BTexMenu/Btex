@@ -1,4 +1,4 @@
-## Interface: 110207, 120000 11508, 20505, 30405, 40402, 50503
+## Interface: 110207, 120000, 11508, 20505, 30405, 40402, 50503
 ## Title: BTEX 12.0.0 by |cFFFF8080 Zetaprime82, originally from Tiggy|r
 ## Title-frFR: BTEX 12.0.0 par |cFFFF8080 Zetaprime82, à l'origine à partir de Tiggy|r
 ## Title: BTEX |cFFFF8080 Retail, Classic and Classic Era |r
@@ -19,6 +19,7 @@
 
 Localisation.lua
 Btex.lua
+
 
 
 
