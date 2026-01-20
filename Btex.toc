@@ -1,12 +1,12 @@
-## Interface: 110207, 120000, 11508, 20505, 30405, 40402, 50503
-## Title-enUS: BTEX 12.0.0 by |cFFFF8080 Zetaprime82, originally from Tiggy|r
-## Title-frFR: BTEX 12.0.0 par |cFFFF8080 Zetaprime82, à l'origine à partir de Tiggy|r
-## Title-ruRU: BTEX 12.0.0 к |cFFFF8080 Zetaprime82, родом из Tiggy|r
-## Title-deDE: BTEX 12.0.0 von |cFFFF8080 Zetaprime82, ursprünglich aus Tiggy|r
-## Title-zhCN: BTEX 12.0.0 经过 |cFFFF8080 Zetaprime82, 最初来自 Tiggy|r
-## Title-zhTW: BTEX 12.0.0 由 |cFFFF8080 Zetaprime82, 原底是對 Tiggy|r
+## Interface: 120000, 120001, 11508, 20505, 30405, 40402, 50503
+## Title-enUS: BTEX 12.0.1 by |cFFFF8080 Zetaprime82, originally from Tiggy|r
+## Title-frFR: BTEX 12.0.1 par |cFFFF8080 Zetaprime82, à l'origine à partir de Tiggy|r
+## Title-ruRU: BTEX 12.0.1 к |cFFFF8080 Zetaprime82, родом из Tiggy|r
+## Title-deDE: BTEX 12.0.1 von |cFFFF8080 Zetaprime82, ursprünglich aus Tiggy|r
+## Title-zhCN: BTEX 12.0.1 经过 |cFFFF8080 Zetaprime82, 最初来自 Tiggy|r
+## Title-zhTW: BTEX 12.0.1 由 |cFFFF8080 Zetaprime82, 原底是對 Tiggy|r
 ## Title: BTEX |cFFFF8080 Retail, Classic and Classic Era |r
-## Version: 12.0.0 (Retail, Classic and Classic Era)
+## Version: 12.0.1 (Retail, Classic and Classic Era)
 ## Author: Zetaprime82
 ## X-Author: Tiggy, Twistedfury
 ## Notes: A lightweight addon that provide a customisable background texture at the bottom of the screen
@@ -28,6 +28,7 @@
 
 Localisation.lua
 Btex.lua
+
 
 
 
