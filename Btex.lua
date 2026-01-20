@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------------------------------
 --                                               BTEX(Bottom TEXture)                                 --
---                         V12.0.0 (Retail, Classic and Classic Era) - 2025 by Zetaprime82            --
+--                         V12.0.1 (Retail, Classic and Classic Era) - 2025 by Zetaprime82            --
 --                                            Former Author: Twistedfury                              --
 --                                       Originally Author Tiggy, Ysondre-EU                          --
 --------------------------------------------------------------------------------------------------------
@@ -1221,6 +1221,7 @@ function BtexDisplayGrid()
 		BtexGridTexture:SetPoint('BOTTOMRIGHT', BtexGrid, 'TOPRIGHT', 0, -(GetScreenHeight()/2-i*BtexGridHeightStep + 1))
 	end
 end
+
 
 
 
