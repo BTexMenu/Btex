@@ -244,7 +244,7 @@ BtexMenuFrame.text1:SetPoint("TOP",0,-10);
 BtexMenuFrame.text1:SetText("BTex Menu");
 BtexMenuFrame.vers = BtexMenuFrame:CreateFontString(nil,"ARTWORK");
 BtexMenuFrame.vers:SetFont("Interface\\AddOns\\Btex\\Btex.ttf", 10, "");
-BtexMenuFrame.vers:SetPoint("TOPRIGHT",-15,-16);
+BtexMenuFrame.vers:SetPoint("TOP",0,-44);
 BtexMenuFrame.vers:SetText("Version :"..BTEX_VERSION);
 BtexMenuFrame.vers:SetTextColor(1,1,0.5);
 BtexMenuFrame.text2 = BtexMenuFrame:CreateFontString(nil,"ARTWORK");
