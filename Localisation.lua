@@ -19,6 +19,7 @@ SLASHRESET = "- /btex reset : for default.";
 SLASHREMOVE = "- /btex remove : remove actual skin.";
 SLASHCUSTOM = "- /btex custom : toggle custom config windows.";
 SLASHVIEWPORT = "- /btex viewport : toggle viewport menu";
+SLASHMINIMAP = "- Minimap button: left click opens the menu, right click closes it, drag to move it.";
 -- config menu
 SKINCHOOSE = "Choose the skin :";
 SETHEIGHT = "Set Height :";

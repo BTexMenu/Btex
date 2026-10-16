@@ -4,7 +4,13 @@
 --                                            Former Author: Twistedfury                              --
 --                                       Originally Author Tiggy, Ysondre-EU                          --
 --------------------------------------------------------------------------------------------------------
-DEFAULT_CHAT_FRAME:AddMessage("|c00bfffffBtex|r " ..BTEX_VERSION..SLASHLOAD, 0.0, .80, 1);
+-- Announce the slash commands in chat once when the player enters the world.
+local announcementFrame = CreateFrame("Frame")
+announcementFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
+announcementFrame:SetScript("OnEvent", function(self)
+    self:UnregisterEvent("PLAYER_ENTERING_WORLD")
+    print("|c00bfffffBtex:|r /btex menu or /bx menu to open the menu, or click on the new minimap button.")
+end)
 --------------------------------------------------------------------------------------------------------
 --                                          SETUP BOTTOM SKIN loading                                 --
 --------------------------------------------------------------------------------------------------------
@@ -136,6 +142,8 @@ function OnEvent(self, event)
 		if(not TEX_VIEWPORT_TL) then TEX_VIEWPORT_TL = 0 end;
 		if(not TEX_VIEWPORT_TR) then TEX_VIEWPORT_TR = 0 end;
 		if(not TEX_CHAT) then TEX_CHAT = 0 end;
+		if(not TEX_MINIMAP_ANGLE) then TEX_MINIMAP_ANGLE = 215 end;
+		BtexMinimap_Update();
 		BTexMain();
 	end
 end
@@ -146,8 +154,21 @@ end
 function BtexColor_OnClick()
 	if ColorPickerFrame:IsShown() then
 		ColorPickerFrame:Hide();
+		return;
+	end
+	local red = tonumber(TEX_VERTEX_R) or 1
+	local green = tonumber(TEX_VERTEX_G) or 1
+	local blue = tonumber(TEX_VERTEX_B) or 1
+	if ColorPickerFrame.SetupColorPickerAndShow then
+		-- Retail (10.2.5+)
+		ColorPickerFrame:SetupColorPickerAndShow({
+			r = red, g = green, b = blue,
+			hasOpacity = false,
+			swatchFunc = BtexColor_ColorChange,
+			cancelFunc = BtexColor_CancelChanges,
+		})
 	else
-		local red, green, blue = TEX_VERTEX_R, TEX_VERTEX_G, TEX_VERTEX_B
+		-- Classic-era clients
 		ColorPickerFrame.func = BtexColor_ColorChange
 		ColorPickerFrame.cancelFunc = BtexColor_CancelChanges
 		ColorPickerFrame:SetColorRGB(red, green, blue)
@@ -162,10 +183,12 @@ function BtexColor_ColorChange()
 	BTexMain();
 end
 
-function BtexColor_CancelChanges()
-	TEX_VERTEX_R = ColorPickerFrame.previousValues.r;
-	TEX_VERTEX_G = ColorPickerFrame.previousValues.g;
-	TEX_VERTEX_B = ColorPickerFrame.previousValues.b;
+function BtexColor_CancelChanges(previous)
+	-- Retail passes the previous values as a table; Classic stores them on the frame
+	previous = (type(previous) == "table" and previous) or ColorPickerFrame.previousValues or {r = 1, g = 1, b = 1};
+	TEX_VERTEX_R = previous.r;
+	TEX_VERTEX_G = previous.g;
+	TEX_VERTEX_B = previous.b;
 	BTexMain();
 end
 
@@ -440,7 +463,7 @@ BtexViewportFrame.text1:SetPoint("TOP",0,-10);
 BtexViewportFrame.text1:SetText("Viewport settings");
 BtexViewportFrame.text2 = BtexViewportFrame:CreateFontString(nil,"ARTWORK");
 BtexViewportFrame.text2:SetFont("Interface\\AddOns\\Btex\\Btex.ttf", 10, "");
-BtexViewportFrame.text2:SetPoint("TOPLEFT",78,-30);
+BtexViewportFrame.text2:SetPoint("TOPLEFT",78,-44);
 BtexViewportFrame.text2:SetText(VIEWPORTTXT1);
 BtexViewportFrame.right = BtexViewportFrame:CreateFontString(nil,"ARTWORK");
 BtexViewportFrame.right:SetFont("Interface\\AddOns\\Btex\\Btex.ttf", 10, "");
@@ -1103,6 +1126,7 @@ SlashCmdList["Btex"] = function(cmd)
 	param1 = (param1 and param1:lower() or cmd:lower());
 	-- Options
 	if (param1 == "") then
+		BtexMenuFrame:Show();
 		DEFAULT_CHAT_FRAME:AddMessage("|c00bfffffBtex|r " ..BTEX_VERSION.." Slash command :", 0.0, .80, 1);
 		DEFAULT_CHAT_FRAME:AddMessage(SLASHBX);
 		DEFAULT_CHAT_FRAME:AddMessage(SLASHCONF);
@@ -1219,7 +1243,67 @@ function BtexDisplayGrid()
 	end
 end
 
+--------------------------------------------------------------------------------------------------------
+--                                            MINIMAP BUTTON                                          --
+--------------------------------------------------------------------------------------------------------
+local BtexMinimapButton = CreateFrame("Button","BtexMinimapButton",Minimap);
+BtexMinimapButton:SetSize(31,31);
+BtexMinimapButton:SetFrameStrata("MEDIUM");
+BtexMinimapButton:SetFrameLevel(8);
+BtexMinimapButton:RegisterForClicks("LeftButtonUp","RightButtonUp");
+BtexMinimapButton:RegisterForDrag("LeftButton");
+BtexMinimapButton:SetHighlightTexture("Interface\\Minimap\\UI-Minimap-ZoomButton-Highlight");
 
+BtexMinimapButton.icon = BtexMinimapButton:CreateTexture(nil,"BACKGROUND");
+BtexMinimapButton.icon:SetSize(20,20);
+BtexMinimapButton.icon:SetPoint("TOPLEFT",7,-5);
+BtexMinimapButton.icon:SetTexture("Interface\\AddOns\\Btex\\Skins\\Btex");
 
+BtexMinimapButton.border = BtexMinimapButton:CreateTexture(nil,"OVERLAY");
+BtexMinimapButton.border:SetSize(53,53);
+BtexMinimapButton.border:SetPoint("TOPLEFT");
+BtexMinimapButton.border:SetTexture("Interface\\Minimap\\MiniMap-TrackingBorder");
 
+function BtexMinimap_Update()
+	local angle = math.rad(tonumber(TEX_MINIMAP_ANGLE) or 215);
+	local radius = (Minimap:GetWidth() / 2) + 5;
+	BtexMinimapButton:ClearAllPoints();
+	BtexMinimapButton:SetPoint("CENTER",Minimap,"CENTER",math.cos(angle)*radius,math.sin(angle)*radius);
+end
 
+local function BtexMinimap_OnDragUpdate()
+	local mx, my = Minimap:GetCenter();
+	local scale = Minimap:GetEffectiveScale();
+	local cx, cy = GetCursorPosition();
+	TEX_MINIMAP_ANGLE = math.deg(math.atan2(cy/scale - my, cx/scale - mx));
+	BtexMinimap_Update();
+end
+
+BtexMinimapButton:SetScript("OnDragStart",function(self)
+	self:SetScript("OnUpdate",BtexMinimap_OnDragUpdate);
+end);
+BtexMinimapButton:SetScript("OnDragStop",function(self)
+	self:SetScript("OnUpdate",nil);
+end);
+
+BtexMinimapButton:SetScript("OnClick",function(self,button)
+	if button == "RightButton" then
+		BtexMenuFrame:Hide();
+		BtexCustomFrame:Hide();
+		BtexViewportFrame:Hide();
+	else
+		BtexMenuFrame:Show();
+	end
+end);
+
+BtexMinimapButton:SetScript("OnEnter",function(self)
+	GameTooltip:SetOwner(self,"ANCHOR_LEFT");
+	GameTooltip:AddLine("Btex");
+	GameTooltip:AddLine("Left click: open menu",1,1,1);
+	GameTooltip:AddLine("Right click: close menu",1,1,1);
+	GameTooltip:AddLine("Drag: move button",0.7,0.7,0.7);
+	GameTooltip:Show();
+end);
+BtexMinimapButton:SetScript("OnLeave",function() GameTooltip:Hide(); end);
+
+BtexMinimap_Update();
