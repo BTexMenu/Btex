@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------------------------------
 --                                               BTEX(Bottom TEXture)                                 --
---                         V12.1.5 (Retail, Forever and Classic Era) - 2026 by Zetaprime82            --
+--                         V12.1 (Retail, Forever and Classic Era) - 2026 by Zetaprime82              --
 --                                            Former Author: Twistedfury                              --
 --                                       Originally Author Tiggy, Ysondre-EU                          --
 --------------------------------------------------------------------------------------------------------
@@ -143,6 +143,7 @@ function OnEvent(self, event)
 		if(not TEX_VIEWPORT_TR) then TEX_VIEWPORT_TR = 0 end;
 		if(not TEX_CHAT) then TEX_CHAT = 0 end;
 		if(not TEX_MINIMAP_ANGLE) then TEX_MINIMAP_ANGLE = 215 end;
+		if(TEX_MINIMAP_SHOW == nil) then TEX_MINIMAP_SHOW = true end;
 		BtexMinimap_Update();
 		BTexMain();
 	end
@@ -1148,6 +1149,9 @@ SlashCmdList["Btex"] = function(cmd)
 	if cmd == "custom" then
 		BtexCustomFrame:Show();
 	end	
+	if cmd == "minimap" then
+		BtexMinimap_Toggle();
+	end
 	if cmd == "viewport" then
 		BtexViewportFrame:Show();
 	end	
@@ -1265,6 +1269,11 @@ BtexMinimapButton.border:SetPoint("TOPLEFT");
 BtexMinimapButton.border:SetTexture("Interface\\Minimap\\MiniMap-TrackingBorder");
 
 function BtexMinimap_Update()
+	if TEX_MINIMAP_SHOW == false then
+		BtexMinimapButton:Hide();
+		return;
+	end
+	BtexMinimapButton:Show();
 	local angle = math.rad(tonumber(TEX_MINIMAP_ANGLE) or 215);
 	local radius = (Minimap:GetWidth() / 2) + 5;
 	BtexMinimapButton:ClearAllPoints();
@@ -1307,3 +1316,34 @@ end);
 BtexMinimapButton:SetScript("OnLeave",function() GameTooltip:Hide(); end);
 
 BtexMinimap_Update();
+
+-- Show/hide the minimap button (checkbox in the main menu + /btex minimap)
+local BtexMinimapCheck = CreateFrame("CheckButton",nil,BtexMenuFrame);
+BtexMinimapCheck:SetSize(26,26);
+BtexMinimapCheck:SetPoint("TOPLEFT",8,-235);
+BtexMinimapCheck:SetNormalTexture("Interface\\Buttons\\UI-CheckBox-Up");
+BtexMinimapCheck:SetPushedTexture("Interface\\Buttons\\UI-CheckBox-Down");
+BtexMinimapCheck:SetHighlightTexture("Interface\\Buttons\\UI-CheckBox-Highlight");
+BtexMinimapCheck:SetCheckedTexture("Interface\\Buttons\\UI-CheckBox-Check");
+BtexMinimapCheck:SetDisabledCheckedTexture("Interface\\Buttons\\UI-CheckBox-Check-Disabled");
+BtexMinimapCheck.text = BtexMenuFrame:CreateFontString(nil,"ARTWORK");
+BtexMinimapCheck.text:SetFont("Interface\\AddOns\\Btex\\Btex.ttf", 10, "");
+BtexMinimapCheck.text:SetPoint("LEFT",BtexMinimapCheck,"RIGHT",2,0);
+BtexMinimapCheck.text:SetText("Minimap button");
+
+local function BtexMinimap_SetShown(show)
+	TEX_MINIMAP_SHOW = show and true or false;
+	BtexMinimapCheck:SetChecked(TEX_MINIMAP_SHOW);
+	BtexMinimap_Update();
+end
+
+function BtexMinimap_Toggle()
+	BtexMinimap_SetShown(TEX_MINIMAP_SHOW == false);
+end
+
+BtexMinimapCheck:SetScript("OnClick",function(self)
+	BtexMinimap_SetShown(self:GetChecked());
+end);
+BtexMenuFrame:HookScript("OnShow",function()
+	BtexMinimapCheck:SetChecked(TEX_MINIMAP_SHOW ~= false);
+end);
